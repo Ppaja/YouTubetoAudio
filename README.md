@@ -1,5 +1,7 @@
 # YouTube to Audio Converter
 
+![screenshot.jpg](screenshot.jpg)
+
 This tool allows users to convert YouTube videos into MP3 files. It features a simple graphical user interface (GUI) that enables users to input the URL of the YouTube video, select the desired audio quality, and start the download and conversion process.
 
 ## Easy Installation (For Non-Technical Users)

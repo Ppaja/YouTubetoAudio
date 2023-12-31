@@ -12,5 +12,6 @@ if %errorlevel% neq 0 (
 
 :: Installieren der erforderlichen Pakete aus requirements.txt
 pip install -r requirements.txt
+@echo requirements installed
 
 pause

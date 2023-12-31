@@ -22,8 +22,9 @@ def download_video():
         audio.write_audiofile(new_file, bitrate=target_bitrate)
         os.remove(downloaded_file)
 
-        progress_bar['value'] = 100  # Update progress bar to 100% after conversion
+        progress_bar['value'] = 100  
         app.update_idletasks()
+        url_entry.delete(0, 'end') 
     except Exception as e:
         progress_bar['value'] = 0
         print(f"Error: {e}")

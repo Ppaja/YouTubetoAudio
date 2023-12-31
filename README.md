@@ -18,14 +18,16 @@ git clone https://github.com/Ppaja/YouTubetoAudio.git
 2. Navigate to the project folder and install the requirements:
 
 ```
+cd YOUR_PROJECTFOLDER_PATH
 pip install -r requirements.txt
 ```
 3. Start the tool by running `download.py` in Python:
 
 ```
-cd YOUR_PROJECTFOLDER_PATH
 python download.py
 ```
+
+YOUR_PROJECTFOLDER_PATH = the folder where all the file are
 
 ## How to Use
 1. Enter a YouTube URL.

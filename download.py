@@ -12,26 +12,22 @@ def download_video():
         video = YouTube(url)
         stream = video.streams.filter(only_audio=True).first()
 
-        # Ordner für heruntergeladene Dateien festlegen
         output_folder = "DownloadedFiles"
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)
 
-        # Datei herunterladen und speichern
+        # download
         downloaded_file = stream.download(output_path=output_folder)
         progress_bar['value'] = 50
         app.update_idletasks()
 
-        # Neuen Pfad für die konvertierte Datei festlegen
         base, ext = os.path.splitext(downloaded_file)
         new_file = os.path.join(output_folder, os.path.basename(base) + '.mp3')
 
-        # Audio konvertieren und im spezifizierten Ordner speichern
         target_bitrate = quality
         audio = AudioFileClip(downloaded_file)
         audio.write_audiofile(new_file, bitrate=target_bitrate)
         
-        # Ursprüngliche Datei entfernen
         os.remove(downloaded_file)
 
         progress_bar['value'] = 100

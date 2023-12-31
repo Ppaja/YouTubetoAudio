@@ -1,6 +1,6 @@
 @echo off
 
-:: Überprüfen, ob Python installiert ist
+:: Überprüfung, ob Python installiert ist
 python --version
 if %errorlevel% neq 0 (
     echo Python not found. Please install Python.

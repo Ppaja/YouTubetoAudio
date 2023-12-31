@@ -4,6 +4,10 @@ from pytube import YouTube
 from moviepy.editor import *
 import threading
 import os
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
 
 def download_video():
     url = url_entry.get()
